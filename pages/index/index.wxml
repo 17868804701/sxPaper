@@ -1,0 +1,62 @@
+<!--index.wxml-->
+<view class="container">
+  <image src='../image/paper.jpg' style='width:{{width}}px;height:{{height}}px;'></image>
+  <view class='footer'>
+    <view class='img' bindtap='banci'>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <image src='../image/banben.png' class='banci_img' style='width: 40rpx;height: 40rpx;'></image>
+        <text class='banci_title'>版次</text>
+      </picker>
+    </view>
+    <view class='img' bindtap='mulu'>
+      <image src='../image/mulu.png'></image>
+      <text>目录</text>
+    </view>
+    <view class='img'>
+      <picker mode="date" value="{{date}}" start="1015-09-01" end="2217-09-01" bindchange="bindDateChange">
+        <image src='../image/data.png' class='wangqi_img'></image>
+        <text class='wangqi_title'>往期</text>
+      </picker>
+    </view>
+  </view>
+
+
+
+  <view class='new_list' style='display:{{show}}'>
+    <view class='header'>
+      <text>第A01版要闻</text>
+    </view>
+      <scroll-view scroll-y style="height:800rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <view class='listItem' bindtap='newsInfo'>
+      <text>创建国家森林城市</text>
+    </view>
+    <view class='listItem' bindtap='newsInfo'>
+      <text>创建国家森林城市</text>
+    </view>
+    <view class='listItem' bindtap='newsInfo'>
+      <text>创建国家森林城市</text>
+    </view>
+    <view class='listItem' bindtap='newsInfo'>
+      <text>创建国家森林城市</text>
+    </view>
+    <view class='listItem' bindtap='newsInfo'>
+      <text>创建国家森林城市</text>
+    </view>
+    <view class='listItem' bindtap='newsInfo'>
+      <text>创建国家森林城市</text>
+    </view>
+    <view class='listItem' bindtap='newsInfo'>
+      <text>创建国家森林城市</text>
+    </view>
+    <view class='listItem' bindtap='newsInfo'>
+      <text>创建国家森林城市</text>
+    </view>
+    <view class='listItem' bindtap='newsInfo'>
+      <text>创建国家森林城市</text>
+    </view>
+    <view class='listItem' bindtap='newsInfo'>
+      <text>创建国家森林城市</text>
+    </view>
+    </scroll-view>
+  </view>
+</view>

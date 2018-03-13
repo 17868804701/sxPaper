@@ -1,0 +1,33 @@
+/* pages/newsInfo/newsInfo.wxss */
+.header{
+  width:95%;
+  margin-left: 2.5%;
+  margin-top: 20rpx;
+  font-size: 33rpx;
+  font-weight: bold;
+}
+page{
+  /* background: #f0f0f0; */
+}
+.title{
+  height: 70rpx;  
+  border-bottom: 1px solid #dbdbdb;
+  width: 95%;
+  line-height: 70rpx;
+  margin-left: 2.5%;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #c0c0c0;
+}
+.title text:nth-child(2){
+  margin-left: 30rpx;
+}
+.content{
+  width: 95%;
+  margin-left: 2.5%;
+  font-size: 30rpx;
+  font-family: '微软雅黑';
+  margin-top: 30rpx;
+  text-indent: 60rpx;
+  line-height: 60rpx;
+}
