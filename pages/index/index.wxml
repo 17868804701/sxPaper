@@ -1,6 +1,8 @@
 <!--index.wxml-->
 <view class="container">
-  <image src='../image/paper.jpg' style='width:{{width}}px;height:{{height}}px;'></image>
+  <!-- <canvas canvas-id="firstCanvas" bindtap='img'></canvas>  -->
+  <!-- <canvas canvas-id="secondCanvas" bindtap='img1'></canvas>  -->
+  <image src='{{imgUrl}}' style='width:750rpx;height:1200rpx;' bindtap='img'></image>
   <view class='footer'>
     <view class='img' bindtap='banci'>
       <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
@@ -13,7 +15,7 @@
       <text>目录</text>
     </view>
     <view class='img'>
-      <picker mode="date" value="{{date}}" start="1015-09-01" end="2217-09-01" bindchange="bindDateChange">
+      <picker mode="date" value="{{date}}" start="1015-09-01" end="2217-09-01" bindchange="bindTimeChange">
         <image src='../image/data.png' class='wangqi_img'></image>
         <text class='wangqi_title'>往期</text>
       </picker>
@@ -21,42 +23,15 @@
   </view>
 
 
-
+  <!-- 新闻列表弹框 -->
   <view class='new_list' style='display:{{show}}'>
     <view class='header'>
-      <text>第A01版要闻</text>
+      <text>第{{num}}版要闻</text>
     </view>
-      <scroll-view scroll-y style="height:800rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
-    <view class='listItem' bindtap='newsInfo'>
-      <text>创建国家森林城市</text>
-    </view>
-    <view class='listItem' bindtap='newsInfo'>
-      <text>创建国家森林城市</text>
-    </view>
-    <view class='listItem' bindtap='newsInfo'>
-      <text>创建国家森林城市</text>
-    </view>
-    <view class='listItem' bindtap='newsInfo'>
-      <text>创建国家森林城市</text>
-    </view>
-    <view class='listItem' bindtap='newsInfo'>
-      <text>创建国家森林城市</text>
-    </view>
-    <view class='listItem' bindtap='newsInfo'>
-      <text>创建国家森林城市</text>
-    </view>
-    <view class='listItem' bindtap='newsInfo'>
-      <text>创建国家森林城市</text>
-    </view>
-    <view class='listItem' bindtap='newsInfo'>
-      <text>创建国家森林城市</text>
-    </view>
-    <view class='listItem' bindtap='newsInfo'>
-      <text>创建国家森林城市</text>
-    </view>
-    <view class='listItem' bindtap='newsInfo'>
-      <text>创建国家森林城市</text>
-    </view>
+    <scroll-view scroll-y style="height:800rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+      <view class='listItem' bindtap='newsInfo' wx:for="{{newList}}">
+        <text>{{item.title}}</text>
+      </view>
     </scroll-view>
   </view>
 </view>

@@ -1,5 +1,10 @@
 //app.js
 App({
+  data:{
+    url:'http://xcx.joyhua.cn:4336/tbpaper.do',
+    publishDate:'',
+    folder:''
+  },
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
