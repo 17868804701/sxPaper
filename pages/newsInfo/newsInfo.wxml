@@ -11,7 +11,7 @@
 
   <view class='content'>
     <view class='imgList' hidden='{{show==-1}}'>
-      <image wx:for="{{imgList}}" src='http://xcx.joyhua.cn:4336/sxrb/20180319/html/{{item}}'></image>
+      <image wx:for="{{imgList}}" src='https://xcx.joyhua.cn/sxrb/20180319/html/{{item}}'></image>
     </view>
     <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
   </view>

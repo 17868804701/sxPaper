@@ -1,7 +1,7 @@
 //app.js
 App({
   data:{
-    url:'http://xcx.joyhua.cn:4336/tbpaper.do',
+    url:'https://xcx.joyhua.cn/tbpaper.do',
     publishDate:'',
     folder:''
   },

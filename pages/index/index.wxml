@@ -32,7 +32,7 @@
   <!-- 新闻列表弹框 -->
   <view class='new_list' style='display:{{show}}'>
     <view class='header'>
-      <text>第{{num}}版要闻</text>
+      <text>第{{index}}版要闻</text>
     </view>
     <scroll-view scroll-y style="height:800rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
       <view class='listItem' wx:for="{{areaItem}}" 

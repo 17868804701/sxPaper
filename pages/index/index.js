@@ -8,6 +8,7 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     show: 'none',
+    index:"1",
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
@@ -85,7 +86,7 @@ Page({
                   newList: res.data,
                   imgurl: res.data[0].perVerImgUrl,
                   folder: getApp().data.folder,
-                  url: "http://xcx.joyhua.cn:4336/"
+                  url: "https://xcx.joyhua.cn/"
                 })
                 console.log(that.data.url + '/' + that.data.folder + '/html/' + that.data.imgurl)
                 that.setData({
@@ -167,6 +168,9 @@ Page({
   bindPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', this.data.array[e.detail.value])
     var index = this.data.array[e.detail.value].substring(0, 2)
+    this.setData({
+      index:index
+    })
     var that = this
     //4、 再根据日期和版次查出一个版所有的文章列表
     wx.request({
@@ -191,7 +195,7 @@ Page({
           newList: res.data,
           imgurl: res.data[0].perVerImgUrl,
           folder: getApp().data.folder,
-          url: "http://xcx.joyhua.cn:4336/"
+          url: "https://xcx.joyhua.cn/"
         })
         console.log(that.data.url + '/' + that.data.folder + '/html/' + that.data.imgurl)
         that.setData({
@@ -285,7 +289,7 @@ Page({
               newList: res.data,
               imgurl: res.data[0].perVerImgUrl,
               folder: getApp().data.folder,
-              url: "http://xcx.joyhua.cn:4336/"
+              url: "https://xcx.joyhua.cn/"
             })
             console.log(that.data.url + '/' + that.data.folder + '/html/' + that.data.imgurl)
             that.setData({
