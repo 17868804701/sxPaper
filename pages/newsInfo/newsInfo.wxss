@@ -24,7 +24,7 @@
 }
 
 .title text:nth-child(3) {
-  margin-left: 160rpx;
+   margin-left: 20rpx; 
 }
 
 .content {
