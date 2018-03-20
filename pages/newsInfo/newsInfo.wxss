@@ -1,33 +1,52 @@
 /* pages/newsInfo/newsInfo.wxss */
-.header{
-  width:95%;
+@import "../wxParse/wxParse.wxss";
+
+.header {
+  width: 95%;
   margin-left: 2.5%;
   margin-top: 20rpx;
   font-size: 33rpx;
   font-weight: bold;
 }
-page{
-  /* background: #f0f0f0; */
-}
-.title{
-  height: 70rpx;  
+.title {
+  height: 70rpx;
   border-bottom: 1px solid #dbdbdb;
   width: 95%;
   line-height: 70rpx;
   margin-left: 2.5%;
   font-size: 28rpx;
-  font-weight: bold;
-  color: #c0c0c0;
+  /* font-weight: bold; */
+  color: #333;
 }
-.title text:nth-child(2){
+
+.title text:nth-child(2) {
   margin-left: 30rpx;
 }
-.content{
+
+.title text:nth-child(3) {
+  margin-left: 160rpx;
+}
+
+.content {
   width: 95%;
   margin-left: 2.5%;
-  font-size: 30rpx;
+  font-size: 28rpx;
   font-family: '微软雅黑';
   margin-top: 30rpx;
   text-indent: 60rpx;
   line-height: 60rpx;
+}
+
+.imgList {
+  /* height: 400rpx; */
+  width: 90%;
+  margin-left: 5%;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+image{
+  margin-bottom: 22rpx;
 }
