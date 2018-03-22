@@ -1,13 +1,14 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/test/test",
     "pages/newsInfo/newsInfo",
     "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "#20a1a1",
+    "navigationBarTitleText": "微信小程序",
+    "navigationBarTextStyle":"#ffffff"
   }
 }

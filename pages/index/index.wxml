@@ -1,14 +1,13 @@
 <!--index.wxml-->
-<view class="container">
-   <view wx:for="{{areaItem}}" style='border:0rpx solid red;margin-left:{{(item.x1-10)*2}}rpx;position:fixed;width:{{(item.x3-item.x1)*2}}rpx;height:{{(item.x6-item.x4)*2}}rpx;top:{{(item.x2-20)*2}}rpx' 
+<view class="container" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE"> 
+   <view wx:for="{{areaItem}}" id='area' style='border:0rpx solid red;margin-left:{{(item.x1-30)*2}}rpx;position:fixed;width:{{(item.x3-item.x1)*2}}rpx;height:{{(item.x6-item.x4)*2}}rpx;top:{{(item.x2-20)*2}}rpx;' 
    bindtap='jumpPageInfo'
    data-title='{{item.title}}'
    data-verOrder='{{item.verOrder}}'
    data-publishDate='{{item.publishDate}}'
-   
    >
    </view>    
-  <image src='{{imgUrl}}' style='width:750rpx;height:1200rpx;' bindtap='img'></image>
+  <image src='{{imgUrl}}' style='width:740rpx;height:1190rpx;margin-left:5rpx;margin-top:5rpx;border:0px solid red' bindtap='img'></image> 
   <view class='footer'>
     <view class='img' bindtap='banci'>
       <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
