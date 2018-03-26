@@ -11,7 +11,7 @@ Page({
     index:"0",
     select:"",
     hasUserInfo: false,
-    verOrder:"01",
+    verOrder:"1",
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   upper:function(){
@@ -82,7 +82,7 @@ Page({
               method: 'POST',
               data: {
                 "Sj": getApp().data.publishDate,
-                "verOrder": that.data.verOrder
+                "verOrder": that.data.verOrder < 10 ? "0" + that.data.verOrder : that.data.verOrder
               },
               header: {
                 "Content-Type": "application/x-www-form-urlencoded"
@@ -259,7 +259,6 @@ Page({
       method: 'POST',
       data: {
         "Sj": getApp().data.publishDate,
-        // "verOrder": "04"
       },
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
@@ -283,13 +282,11 @@ Page({
         })
 
         wx.request({
-          // url: `${getApp().data.url}?epaper=homeVerOrderName&Sj=${getApp().data.publishDate}`,
           url: `${getApp().data.url}?epaper=homeVerOrder`,
           method: 'POST',
           data: {
             "Sj": getApp().data.publishDate,
             "verOrder": that.data.verOrder < 10 ? "0" + that.data.verOrder : that.data.verOrder
-            // "verOrder": "01"
           },
           header: {
             "Content-Type": "application/x-www-form-urlencoded"
@@ -483,7 +480,6 @@ Page({
         console.log(this.data.verOrder)
         if (this.data.verOrder<this.data.verOrderLength+1){
           wx.request({
-            // url: `${getApp().data.url}?epaper=homeVerOrderName&Sj=${getApp().data.publishDate}`,
             url: `${getApp().data.url}?epaper=homeVerOrder`,
             method: 'POST',
             data: {

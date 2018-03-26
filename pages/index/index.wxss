@@ -11,6 +11,7 @@
   box-sizing: border-box;
   overflow: hidden;
   background: "red";
+  
 }
 
 #area:active {

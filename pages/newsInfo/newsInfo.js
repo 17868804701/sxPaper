@@ -13,6 +13,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(getApp().data.folder)
     console.log(options);
     var publishdate = options.publishdate
     var title = options.title
@@ -56,7 +57,8 @@ Page({
             verName: res.data[0].verName,
             click: res.data[0].click,
             imgList:imgList,
-            show:show
+            show:show,
+            floder: getApp().data.folder
           })
 
           var article = res.data[0].content.replace(/\r\n/g, "<br>&nbsp;&nbsp;");
