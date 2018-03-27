@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE"> 
-   <view wx:for="{{areaItem}}" id='area' style='border:0rpx solid red;margin-left:{{(item.x1-30)*2}}rpx;position:fixed;width:{{(item.x3-item.x1)*2}}rpx;height:{{(item.x6-item.x4)*2}}rpx;top:{{(item.x2-20)*2}}rpx;' 
+   <view wx:for="{{areaItem}}" id='area' style='border:0rpx solid red;margin-left:{{(item.x1-30)*2}}rpx;position:fixed;width:{{(item.x3-item.x1)*2}}rpx;height:{{(item.x6-item.x4)*2}}rpx;top:{{(item.x2-17)*2}}rpx;' 
    bindtap='jumpPageInfo'
    data-title='{{item.title}}'
    data-verOrder='{{item.verOrder}}'

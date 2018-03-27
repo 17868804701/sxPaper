@@ -44,8 +44,8 @@ Page({
           })
           console.log(res)
         } else {
-          console.log(res.data)
-          console.log(res.data[0].images)
+          console.log(res.data,"详情")
+          // console.log(res.data[0].images)
           let imgUrl = res.data[0].images
           let imgList = imgUrl.split(",")
           let show = imgList[0].indexOf(".jpg")
